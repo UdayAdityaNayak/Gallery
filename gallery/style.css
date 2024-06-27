@@ -1,0 +1,81 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html,
+body{
+    font-family:"poppins" sans-serif;
+    background-color: white;
+    color: rgb(8, 8, 8);
+}
+.wrap{
+    overflow-x: hidden;
+    overflow-y:auto;
+    height: 100%;
+}
+.container{
+    max-width:1200px;
+    height:100%;
+    padding:20px;
+    margin: 0 auto;
+}
+.container h2{
+   text-align:center;
+   font-size:3rem;
+   margin:20px 0;
+   margin-bottom:20px;
+}
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.card{
+    width:32%;
+    position: relative;
+    overflow: hidden;
+    border-radius:10px;
+    margin-bottom: 20px;
+    transition:0.5s transform ease-in-out;
+}
+.card img{
+    height:100%;
+    width: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #332;
+    object-fit: cover;
+
+
+}
+.card:hover{
+    transform: scale(1.1);
+    
+    filter:drop-shadow(0 0 10px #2e2e2e)
+}
+.card:hover img{
+    filter:grayscale(0%);
+    
+    
+
+}
+.card figcaption{
+    position:absolute;
+    font-size:1rem;
+    left:0;
+    bottom:0;
+    height:50px;
+    width:100%;
+    text-align:center;
+    color: whitesmoke;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg,rgb(0, 0, 0,0.5) rgba(255, 255, 255, 0.100));
+    opacity:0;
+    -webkit-text-stroke: 0.5px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(2);
+    transition: 0.5s ease-in-out;
+}
